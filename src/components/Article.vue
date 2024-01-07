@@ -43,53 +43,53 @@ watch(lgAndLarger, (lgAndLarger) => {
           disableOnInit: disableOnInit,
         }"
       >
-        <div
-          :key="1"
-          data-aos="fade-up"
-          data-aos-duration="500"
-          class="!bg-theme-yellow card card-hover-animation cursor-pointer py-[18px] px-[12px] w-fit flex flex-col justify-between"
-        >
-          <div class="flex flex-col gap-1 w-[182px]">
-            <span class="text-[12px] font-medium">Collection</span>
-            <h4 class="font-bold tracking-[-0.07px] text-[14px]">
-              Slack as you Digital HQ
-            </h4>
-          </div>
-          <img
-            src="/illustrations/meditate.svg"
-            width="182"
-            height="112"
-            aria-hidden="true"
-          />
+        <div class="flex" data-aos="fade-up" data-aos-duration="500">
+          <div
+            :key="1"
+            class="!bg-theme-yellow card card-hover-animation cursor-pointer py-[18px] px-[12px] w-fit flex flex-col justify-between"
+          >
+            <div class="flex flex-col gap-1 w-[182px]">
+              <span class="text-[12px] font-medium">Collection</span>
+              <h4 class="font-bold tracking-[-0.07px] text-[14px]">
+                Slack as you Digital HQ
+              </h4>
+            </div>
+            <img
+              src="/illustrations/meditate.svg"
+              width="182"
+              height="112"
+              aria-hidden="true"
+            />
 
-          <div class="text-right">
-            <a href="#" class="text-[14px] font-bold">Read More ></a>
+            <div class="text-right">
+              <a href="#" class="text-[14px] font-bold">Read More ></a>
+            </div>
           </div>
         </div>
-        <ArticleCard
-          :key="2"
-          data-aos="fade-up"
-          data-aos-duration="700"
-          img="/images/article.png"
-          title="See how others are building their digital HQ"
-          category="Resource"
-        ></ArticleCard>
-        <ArticleCard
-          :key="3"
-          data-aos="fade-up"
-          data-aos-duration="900"
-          img="/images/article-2.png"
-          title="Win the battle for talent with a digital HQ"
-          category="Webinar"
-        ></ArticleCard>
-        <ArticleCard
-          :key="4"
-          data-aos="fade-up"
-          data-aos-duration="1100"
-          img="/images/article-3.png"
-          title="Reinventing work: New imperatives for the future of working"
-          category="E-Book"
-        ></ArticleCard>
+        <div class="flex" data-aos="fade-up" data-aos-duration="700">
+          <ArticleCard
+            :key="2"
+            img="/images/article.png"
+            title="See how others are building their digital HQ"
+            category="Resource"
+          ></ArticleCard>
+        </div>
+        <div class="flex" data-aos="fade-up" data-aos-duration="900">
+          <ArticleCard
+            :key="3"
+            img="/images/article-2.png"
+            title="Win the battle for talent with a digital HQ"
+            category="Webinar"
+          ></ArticleCard>
+        </div>
+        <div class="flex" data-aos="fade-up" data-aos-duration="1100">
+          <ArticleCard
+            :key="4"
+            img="/images/article-3.png"
+            title="Reinventing work: New imperatives for the future of working"
+            category="E-Book"
+          ></ArticleCard>
+        </div>
       </Flicking>
     </div>
   </div>
