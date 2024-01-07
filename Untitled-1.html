@@ -1,0 +1,70 @@
+<script setup lang="ts"></script>
+
+<template>
+  <nav
+    class="navbar flex h-[72px] w-full border-b-2 border-theme-black bg-theme-white divide-x-2 divide-theme-black"
+  >
+    <div class="px-6 h-full flex items-center flex-1 lg:flex-none">
+      <img src="/brand.png" width="127" height="34" alt="Slack Logo" />
+    </div>
+    <div class="flex-1 hidden lg:flex">
+      <ul class="list-none inline-block">
+        <li class="">
+          Products
+          <img
+            class="ml-[6px]"
+            src="/icons/chevron-down.svg"
+            height="18"
+            width="18"
+            alt="chevron-down"
+          />
+        </li>
+        <li>Solutions</li>
+        <li>Enterprise</li>
+        <li>Resource</li>
+        <li>Pricing</li>
+      </ul>
+    </div>
+    <div class="flex-0 flex px-6 gap-3">
+      <button>
+        <img height="18" width="18" src="/icons/search.svg" alt="search" />
+      </button>
+      <button class="lg:hidden">
+        <img height="18" width="18" src="/icons/menu.svg" alt="search" />
+      </button>
+    </div>
+    <div class="flex-0 xl:flex px-6 items-center hidden">
+      <div class="flex gap-[6px]">
+        <img
+          height="18"
+          width="18"
+          src="/icons/headphone.svg"
+          alt="Talk To Sales"
+        />
+        <span>Talk To Sales</span>
+      </div>
+    </div>
+    <div
+      class="flex-0 hidden lg:flex bg-theme-black text-theme-white px-6 items-center"
+    >
+      <button>Login / Register</button>
+    </div>
+  </nav>
+</template>
+
+<style>
+  .navbar ul {
+    @apply flex h-full gap-3 px-3;
+  }
+
+  .navbar ul li {
+    @apply h-full px-3 flex items-center;
+  }
+
+  .navbar {
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.96px;
+  }
+</style>

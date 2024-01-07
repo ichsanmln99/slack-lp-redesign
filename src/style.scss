@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;800&family=Syne:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@function textShadow($precision, $size, $color, $offsetX, $offsetY) {
+  $value: null;
+  $length: $size * calc(1 / $precision) - 1;
+
+  @for $i from 0 through $length {
+    $offsetY: $offsetY + $precision;
+    $offsetX: $offsetX + $precision;
+    $shadow: $offsetY + px $offsetX + px $color;
+    $value: append($value, $shadow, comma);
+  }
+
+  @return $value;
+}
+
+@function textStroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke * -1;
+  @for $i from $from through $stroke {
+    @for $j from $from through $stroke {
+      $shadow: append($shadow, $i * 1px $j * 1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}
+
+body {
+  font-family: Syne, sans-serif;
+}
+
+.font-karla {
+  font-family: "Karla", sans-serif;
+}
+
+.shadow-solid {
+  box-shadow: 6px 6px 0px 0px #000;
+  -webkit-box-shadow: 6px 6px 0px 0px #000;
+  -moz-box-shadow: 6px 6px 0px 0px #000;
+}
+
+.shadow-solid-sm {
+  box-shadow: 3px 3px 0px 0px #000;
+  -webkit-box-shadow: 3px 3px 0px 0px #000;
+  -moz-box-shadow: 3px 3px 0px 0px #000;
+}
+
+.svg-shadow-solid {
+  filter: drop-shadow(1px 1px 0px #000) drop-shadow(2px 2px 0px #000);
+  -webkit-filter: drop-shadow(1px 1px 0px #000) drop-shadow(2px 2px 0px #000);
+}
+
+.line-background {
+  background: #e7e6e9;
+  position: relative;
+}
+
+.line-background::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/background.png");
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  opacity: 0.2;
+}
+
+.line-background-2 {
+  background: #e7e6e9;
+  position: relative;
+}
+
+.line-background-2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/background-2.png");
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  opacity: 0.2;
+}
+
+.text-shadow-10 {
+  position: relative;
+  text-shadow: textStroke(2, #000), textShadow(0.2, 10, #000, -2, 2),
+    textShadow(0.2, 10, #000, -2, -1), textShadow(0.2, 10, #000, -2, -2),
+    textShadow(0.2, 10, #000, -2, 0), textShadow(0.2, 10, #000, -2, 1);
+}
+
+.card {
+  @apply border-4 border-theme-black divide-theme-black rounded-[14px] shadow-solid bg-theme-white;
+}
+
+.container-section {
+  @apply xl:px-[230px] lg:px-24 px-2;
+}
+
+.container-content {
+  @apply mx-auto lg:max-w-[1220px];
+}
+
+.card-hover-animation {
+  @apply hover:-translate-y-5 transition ease-in-out;
+}
