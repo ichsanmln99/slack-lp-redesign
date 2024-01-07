@@ -43,9 +43,8 @@ watch(lgAndLarger, (lgAndLarger) => {
           disableOnInit: disableOnInit,
         }"
       >
-        <div class="flex" data-aos="fade-up" data-aos-duration="500">
+        <div :key="1" class="flex" data-aos="fade-up" data-aos-duration="500">
           <div
-            :key="1"
             class="!bg-theme-yellow card card-hover-animation cursor-pointer py-[18px] px-[12px] w-fit flex flex-col justify-between"
           >
             <div class="flex flex-col gap-1 w-[182px]">
@@ -66,25 +65,22 @@ watch(lgAndLarger, (lgAndLarger) => {
             </div>
           </div>
         </div>
-        <div class="flex" data-aos="fade-up" data-aos-duration="700">
+        <div :key="2" class="flex" data-aos="fade-up" data-aos-duration="700">
           <ArticleCard
-            :key="2"
             img="/images/article.png"
             title="See how others are building their digital HQ"
             category="Resource"
           ></ArticleCard>
         </div>
-        <div class="flex" data-aos="fade-up" data-aos-duration="900">
+        <div :key="3" class="flex" data-aos="fade-up" data-aos-duration="900">
           <ArticleCard
-            :key="3"
             img="/images/article-2.png"
             title="Win the battle for talent with a digital HQ"
             category="Webinar"
           ></ArticleCard>
         </div>
-        <div class="flex" data-aos="fade-up" data-aos-duration="1100">
+        <div :key="4" class="flex" data-aos="fade-up" data-aos-duration="1100">
           <ArticleCard
-            :key="4"
             img="/images/article-3.png"
             title="Reinventing work: New imperatives for the future of working"
             category="E-Book"
