@@ -95,11 +95,11 @@ function toggleSidebar() {
 <style>
 @media only screen and (max-width: 1024px) {
   .mobile-sidebar {
-    @apply bg-white fixed right-0 translate-x-full top-0 h-dvh w-screen transition ease-in-out duration-200 delay-200;
+    @apply bg-white fixed right-0 top-0 h-dvh w-0 transition-all ease-in-out duration-200 delay-200;
   }
 
   .mobile-sidebar.open {
-    @apply !translate-x-0;
+    @apply w-screen;
   }
 }
 

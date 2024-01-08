@@ -27,10 +27,10 @@ import Button from "./Button.vue";
         </div>
 
         <div class="flex md:gap-[26px] gap-4 flex-wrap xl:flex-nowrap">
-          <Button class="w-full justify-center" color="black"
+          <Button class="w-full xl:w-fit justify-center" color="black"
             >Email Signup</Button
           >
-          <Button class="w-full justify-center">
+          <Button class="w-full xl:w-fit justify-center">
             <img
               class="ml-[6px]"
               src="/icons/google.svg"

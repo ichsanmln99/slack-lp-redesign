@@ -31,7 +31,7 @@
 }
 
 .ornament-1::after {
-  @apply -top-9 -left-8 hidden sm:inline-block;
+  @apply -top-8 -left-9 hidden sm:inline-block;
   position: absolute;
   content: "";
   width: 69px;
